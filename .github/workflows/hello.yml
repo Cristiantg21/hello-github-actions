@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - '**'
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   hello:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Print Hello message
         run: |
