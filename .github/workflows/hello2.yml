@@ -1,0 +1,22 @@
+name: Hello CI
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print runner info
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          echo "Branch: $GITHUB_REF"
+          echo "Hello Github Actions"
